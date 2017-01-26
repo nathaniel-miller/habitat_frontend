@@ -1,0 +1,25 @@
+<div class="weather-3 pn centered">
+	<i class="fa li_lab"></i>
+  <h5 class="white-text">Experiment for</h5>
+	<h3 class="white-text">{{ user.experiment.habit.name }}</h3>
+
+	<div class="info">
+		<div class="row">
+				<h4 class="centered">{{ user.experiment.substitute.craving }}</h4>
+			<div class="col-sm-6 col-xs-6 pull-left">
+				<p class="goleft" ng-if="user.experiment.successful">
+          <i class="fa fa-thumbs-up"> </i>
+          Successful
+        </p>
+        <p class="goleft" ng-if="user.experiment.successful == false">
+          <i ng-if="user.experiment.successful == false" class="fa fa-thumbs-down"> </i>
+          Unsuccessful
+        </p>
+			</div>
+			<div class="col-sm-6 col-xs-6 pull-right">
+				<p class="goright"><i class="fa fa-calendar-o"></i> {{ user.experiment.created_at | date : mediumDate }}</p>
+			</div>
+		</div>
+	</div>
+
+</div>

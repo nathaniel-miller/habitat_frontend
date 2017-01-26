@@ -1,0 +1,10 @@
+<div class="twitter-panel pn">
+	<i class="fa fa-arrow-circle-o-right fa-5x"></i>
+  <p class="user">MY PLAN: {{ user.plan }}</p>
+	<p ng-if="user.habit.cue.nature == 'Location'">When I am {{ user.habit.cue.name }}, {{ user.phrase }}.</p>
+	<p ng-if="user.habit.cue.nature == 'Time'">When it is {{ user.habit.cue.name }}, {{ user.phrase }}.</p>
+	<p ng-if="user.habit.cue.nature == 'People'">When I am with {{ user.habit.cue.name }}, {{ user.phrase }}.</p>
+	<p ng-if="user.habit.cue.nature == 'Activity'">After I have {{ user.habit.cue.name }}, {{ user.phrase }}.</p>
+	<p ng-if="user.habit.cue.nature == 'Emotion'">When I am feeling {{ user.habit.cue.name }}, {{ user.phrase }}.</p>
+  <p class="user">{{ user.email }}</p>
+</div>

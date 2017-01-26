@@ -1,0 +1,160 @@
+body {
+  max-width: 830px;
+  min-width: 350px;
+  margin: 0 auto !important;
+  float: none !important;
+}
+.white-panel p {
+  margin-top: 10px;
+}
+
+.white-panel .green {
+	background: #48cfad;
+  color: #ffffff;
+	padding: 3px;
+	margin-bottom: 15px;
+  height: 60px;
+}
+
+.white-panel .blue {
+	background: #68dff0;
+  color: #ffffff;
+	padding: 3px;
+	margin-bottom: 15px;
+  height: 60px;
+}
+
+.white-panel .pink {
+	background: #ed5565;
+  color: #ffffff;
+	padding: 3px;
+	margin-bottom: 15px;
+  height: 60px;
+}
+
+.white-panel .grey {
+	background: #6f6f6f;
+  color: #ffffff;
+	padding: 3px;
+	margin-bottom: 15px;
+  height: 60px;
+}
+
+.white-panel .purple {
+	background: #ac92ec;
+  color: #ffffff;
+	padding: 3px;
+	margin-bottom: 15px;
+  height: 60px;
+}
+
+.icon {
+  font-size: 51px;
+}
+
+.no_bottom_margin {
+  margin-bottom: 0px;
+}
+
+.pn {
+  height: 270px;
+}
+
+.pn:hover {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+p.goleft {
+  margin-left: 0px;
+}
+
+.twitter-panel {
+  /* default fallback */
+background: rgb(0, 0, 0) transparent;
+/* nice browsers */
+background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.bgpattern {
+  background-image: url('../assets/img/pattern.png');
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+.bgimage {
+  background-image: url('../assets/img/deer_in_autumn_forest_by_prusakov.jpg');
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+.label-success {
+  background-color: #48cfad;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.weather-3 {
+  background: #6f6f6f;
+}
+
+#footer {
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   width: 100%;
+}
+
+#nav-menu {
+   position: fixed;
+   left: 0px;
+   bottom: 30px;
+   width: 100%;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+#buffer {
+  height: 60px;
+}
+
+.site-min-height {
+    min-height: 400px;
+}
+
+.btn-clear {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.btn-clear:hover, .btn-clear:focus {
+    color: #ffffff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.table-striped-alt > tbody:nth-child(odd) > tr,
+.table-striped-alt > tbody:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.note-yellow {
+  background-color: #fdfd96;
+}
+
+.note-row-background {
+  background: #f5f5f5;
+}
+
+.x:hover {
+  color: red;
+  cursor:pointer;
+}

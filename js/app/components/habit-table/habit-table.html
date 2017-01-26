@@ -1,0 +1,70 @@
+<div class="row mt">
+  <div class="col-md-12">
+      <div class="content-panel">
+          <table class="table table-striped-alt table-advance table-hover">
+    	  	  <h4><i class="fa fa-angle-right"></i> Habits</h4>
+    	  	  <hr>
+              <thead>
+              <tr>
+                  <th><i class="fa li_pen"></i> Note</th>
+                  <th><i class="fa li_cup"></i> Habit</th>
+                  <th><i class="fa fa-calendar-o"></i> Date</th>
+                  <th><i class="fa fa-tree"></i> Status</th>
+                  <th><i class="fa fa-check"></i> Did It?</th>
+                  <th></th>
+                  <th></th>
+              </tr>
+              </thead>
+              <tbody ng-if="user.habits.length == 0">
+                <tr>
+                  <td colspan="7">
+                    <p>You do not have any habits yet.</p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody ng-if="user.habits.length > 0" ng-repeat="habit in user.habits | orderBy:'-'" ng-attr-id="{{ 'habitRow-' + habit.id }}">
+                <tr>
+                  <td>
+                    <button type="button" class="btn btn-xs btn-default" ng-click="user.noteClick(habit)">
+                      <i ng-if="habit.noteDisplayed == false" class="fa fa-plus"></i>
+                      <i ng-if="habit.noteDisplayed == true" class="fa fa-minus"></i>
+                    </button>
+                  </td>
+                  <td ui-sref="user.show.habit({ id: {{ habit.id }} })">
+                    <a href=''>{{ habit.name}}</a></td>
+                  <td ui-sref="user.show.habit({ id: {{ habit.id }} })">
+                    <p>{{ habit.created_at | date: 'mediumDate' }}</p></td>
+                  <td ui-sref="user.show.habit({ id: {{ habit.id }} })">
+                    <span ng-if="habit.activity" class="label label-success label-mini">Plan of Action</span>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-xs btn-theme02" ng-click="user.increment(habit)">
+                      <i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <button type="button" class="btn btn-xs btn-theme02" ng-click="user.decrement(habit)">
+                      <i class="fa fa-thumbs-down"></i>
+                    </button>
+                  </td>
+                  <td>{{ habit.likes }}</td>
+                  <td ng-if="habit.complete == false">
+                      <button ui-sref="user.edit.habit({ id:{{ habit.id }} })" class="btn btn-theme btn-xs"><i class="fa fa-pencil"></i></button>
+                      <button ng-click="user.delete(habit)" class="btn btn-theme04 btn-xs"><i class="fa fa-trash-o "></i></button>
+                  </td>
+
+                  <td ng-if="habit.complete" ui-sref="user.show.habit({ id: {{ habit.id }} })">
+                    <span class="label label-success label-mini">COMPLETE</span>
+                  </td>
+                </tr>
+                <tr ng-if="habit.noteDisplayed" class="note-row-background">
+                  <td colspan="2"><textarea name="note" rows="8" cols="40" class="note-yellow" ng-model="habit.note"></textarea></td>
+                  <td colspan="2"><p class="alert alert-success" ng-if="habit.message">{{ habit.message }}</p></td>
+                  <td></td>
+                  <td colspan="2">
+                    <button class="btn btn-sm btn-theme03" ng-click="user.saveHabit(habit)">Save Note</button>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+      </div><!-- /content-panel -->
+  </div><!-- /col-md-12 -->
+</div><!-- /row -->

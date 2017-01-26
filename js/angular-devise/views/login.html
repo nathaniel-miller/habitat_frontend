@@ -1,0 +1,37 @@
+<div class="row mt">
+  <div class="col-lg-12">
+    <div class="form-panel">
+
+      <h4 class="mb"><i class="fa fa-angle-right"></i> Sign In</h4>
+
+      <form class="form-inline" name="loginForm">
+
+          <div class="form-group">
+            <div ng-messages="loginForm.email.$error" ng-if="loginForm.email.$touched">
+              <span ng-if="login.hasErrorMessage" class="help-block">{{login.hasErrorMessage}}</span>
+              <span ng-message="email" class="help-block">Must be a VALID email address.</span>
+              <span ng-message="required" class="help-block">You need to enter an email address to login. Just so you know...</span>
+            </div>
+
+              <label class="sr-only" for="email">Email address</label>
+              <input type="email" name="email"
+                     ng-model="user.email" class="form-control"
+                     placeholder="Enter email" required="required"/>
+          </div>
+          <div class="form-group">
+            <div ng-messages="loginForm.password.$error" ng-if="loginForm.password.$touched">
+              <span ng-message="required" class="help-block">You need to enter a password to login. That's how these things generally work.</span>
+            </div>
+
+              <label class="sr-only" for="password">Password</label>
+              <input type="password" name="password"
+                     ng-model="user.password" class="form-control"
+                     placeholder="Password" required="required" minlength="6"/>
+          </div>
+          <button type="submit" ng-click="login.submit(user)" class="btn btn-theme03" ng-disabled="loginForm.$invalid"/>Sign In</button>
+          <button ui-sref="register" class="btn btn-theme">Sign Up</button>
+      </form>
+
+    </div><!-- /form-panel -->
+  </div><!-- /col-lg-12 -->
+</div><!-- /row -->

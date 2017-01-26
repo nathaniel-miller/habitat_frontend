@@ -1,0 +1,39 @@
+<div class="row mt">
+  <div class="col-lg-12">
+    <div class="form-panel">
+
+      <h4 class="mb"><i class="fa fa-angle-right"></i> Update the Status of This Experiment. Or Change It Entirely.</h4>
+
+      <form class="form-group" name="editExpForm">
+
+        <div class="form-group">
+          <label for="substitute">Substitute Reward: </label><br />
+          <input type="text" name="substitute" required="required"
+                 ng-model="user.experiment.substitute_attributes.craving"
+                 class="form-control" /><br />
+          <div ng-if="editExpForm.substitute.$touched && editExpForm.substitute.$error.required">
+            You need to experiment with different motivators. You'll find one that drives you.
+          </div><br />
+        </div>
+
+        <div class="form-group">
+          <label for="successful">Successful? </label>
+          <input type="checkbox" name="successful" ng-model="user.experiment.successful" /><br />
+        </div>
+
+        <div class="form-group">
+          <div ng-if="user.experiment.successful">
+            <label for="activity">Plan: I will ____________ because if provides me with the above reward.</label><br />
+            <textarea class="form-control" rows="4" name="activity" required="required" ng-model="user.experiment.habit.activity_attributes.description"/></textarea><br />
+          </div><br />
+          <div ng-if="editExpForm.activity.$touched && editExpForm.activity.$error.required">
+            Give an activity that you feel will provide the kind of reward you are looking for.
+          </div><br />
+        </div>
+
+        <input type="submit" ng-click="user.submit(user.experiment)" value="Save" ng-disabled="editExpForm.$invalid" class="btn btn-theme03" />
+      </form>
+
+    </div><!-- /form-panel -->
+  </div><!-- /col-lg-12 -->
+</div><!-- /row -->

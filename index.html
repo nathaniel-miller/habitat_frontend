@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/habit-at.css">
+
+    <title>Habit@</title>
+  </head>
+  <body ng-class="{ bgimage: outside, bgpattern: inside }">
+    <section id="container" >
+      <ui-view></ui-view>
+    </section>
+
+    <!-- core -->
+    <script src="/js/angular.js" charset="utf-8"></script>
+    <script src="/js/ui-router/angular-ui-router.js" charset="utf-8"></script>
+    <script src="/js/angular-devise/devise.js" charset="utf-8"></script>
+    <script src="/js/angular-messages/angular-messages.min.js" charset="utf-8"></script>
+    <script src="/js/angular-cookies/angular-cookies.min.js" charset="utf-8"></script>
+    <script src="/js/app/app.js" charset="utf-8"></script>
+
+    <!-- states -->
+    <script src="/js/app/routes/login-states.js" charset="utf-8"></script>
+    <script src="/js/app/routes/user-parent-state.js" charset="utf-8"></script>
+    <script src="/js/app/routes/user-main-states.js" charset="utf-8"></script>
+    <script src="/js/app/routes/user-new-states.js" charset="utf-8"></script>
+    <script src="/js/app/routes/user-show-states.js" charset="utf-8"></script>
+    <script src="/js/app/routes/user-edit-states.js" charset="utf-8"></script>
+
+    <!-- controllers -->
+    <script src="/js/angular-devise/controllers/login.controller.js" charset="utf-8"></script>
+    <script src="/js/angular-devise/controllers/registration.controller.js" charset="utf-8"></script>
+    <script src="/js/angular-devise/controllers/logout.controller.js" charset="utf-8"></script>
+
+    <script src="/js/app/controllers/user.controller.js" charset="utf-8"></script>
+
+    <script src="/js/app/controllers/main/home.controller.js" charset="utf-8"></script>
+    <script src="/js/app/controllers/main/complete.controller.js" charset="utf-8"></script>
+    <script src="/js/app/controllers/main/experiment.controller.js" charset="utf-8"></script>
+
+    <script src="/js/app/controllers/habit/edit.habit.controller.js" charset="utf-8"></script>
+    <script src="/js/app/controllers/habit/new.habit.controller.js" charset="utf-8"></script>
+    <script src="/js/app/controllers/habit/show.habit.controller.js" charset="utf-8"></script>
+
+    <script src="/js/app/controllers/experiment/edit.experiment.controller.js" charset="utf-8"></script>
+    <script src="/js/app/controllers/experiment/new.experiment.controller.js" charset="utf-8"></script>
+    <script src="/js/app/controllers/experiment/show.experiment.controller.js" charset="utf-8"></script>
+
+    <!-- components -->
+    <script src="/js/app/components/header/header.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/nav/nav.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/new-menu/new-menu.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/footer/footer.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/habit-panel/habit-panel.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/plan-panel/plan-panel.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/experiment-table/experiment-table.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/habit-table/habit-table.component.js" charset="utf-8"></script>
+    <script src="/js/app/components/experiment-panel/experiment-panel.component.js" charset="utf-8"></script>
+
+    <!-- directives -->
+    <script src="/js/app/directives/compare-to.directive.js" charset="utf-8"></script>
+
+    <!-- factories -->
+    <script src="/js/app/factories/activity.factory.js" charset="utf-8"></script>
+    <script src="/js/app/factories/cue.factory.js" charset="utf-8"></script>
+    <script src="/js/app/factories/experiment.factory.js" charset="utf-8"></script>
+    <script src="/js/app/factories/habit.factory.js" charset="utf-8"></script>
+    <script src="/js/app/factories/reward.factory.js" charset="utf-8"></script>
+    <script src="/js/app/factories/base.factory.js" charset="utf-8"></script>
+    <script src="/js/app/factories/form.processor.js" charset="utf-8"></script>
+    <script src="/js/app/factories/note.factory.js" charset="utf-8"></script>
+
+  </body>
+</html>

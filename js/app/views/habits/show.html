@@ -1,0 +1,32 @@
+<hb-habit-panel habit="user.habit"></hb-habit-panel><br />
+
+<div class="showback" ng-if="!user.habit.complete">
+  <div class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <button type="button" class="btn btn-theme" ui-sref="user.edit.habit({ id:{{ user.habit.id }} })">Edit</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-theme04" ng-click="user.delete(user.habit)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="showback" ng-if="user.notePanel">
+  <h4><i class="fa fa-angle-right"></i> Notes</h4>
+  <div class="alert alert-warning">
+    <ul>
+      <li ng-repeat="note in user.habit.notes" ng-if="note.displayed">
+        <i class="fa fa-times x" ng-click="user.deleteNote(note)"> </i> {{ note.contents }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<hb-plan-panel habit="user.habit"
+               email="user.email"
+               phrase="user.phrase"
+               plan="user.plan"
+               ng-if="user.validActivity">
+</hb-plan-panel>
+
+<hb-experiment-table experiments="user.experiments"></hb-experiment-table>

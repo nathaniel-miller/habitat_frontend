@@ -1,0 +1,39 @@
+<div class="white-panel pn">
+	<div ng-class="{
+    green: user.habit.cue.nature == 'Location',
+    blue: user.habit.cue.nature == 'Activity',
+    pink: user.habit.cue.nature == 'People',
+    grey: user.habit.cue.nature == 'Time',
+    purple: user.habit.cue.nature == 'Emotion'
+   }">
+   <div class="col-sm-3 col-xs-3 pull-left">
+     <p class="goleft"><span class="fa  fa-calendar-o"></span> {{ user.habit.created_at | date : mediumDate }}</p>
+   </div>
+   <div class="col-sm-6 col-xs-6 pull-left">
+        <h4>{{ user.habit.name }}</h4>
+   </div>
+   <div class="col-sm-3 col-xs-3 pull-right">
+   </div>
+	</div>
+	<p class="no_bottom_margin">
+    <span class="icon" ng-class="{
+      li_location: user.habit.cue.nature == 'Location',
+      li_tv: user.habit.cue.nature == 'Activity',
+      li_user: user.habit.cue.nature == 'People',
+      li_clock: user.habit.cue.nature == 'Time',
+      li_heart: user.habit.cue.nature == 'Emotion'
+    }">
+    </span>
+  </p>
+		<div class="row">
+			<div class="col-md-6">
+				<p class="small mt">{{ user.habit.cue.nature }}</p>
+				<p>{{ user.habit.cue.name }}</p>
+			</div>
+			<div class="col-md-6">
+				<p class="small mt">Motivation</p>
+        <!-- <span class="goleft small mt">Created: {{ user.habit.created_at | date : mediumDate }}</span> -->
+				<p>{{ user.habit.reward.craving }}</p>
+			</div>
+		</div>
+</div>
