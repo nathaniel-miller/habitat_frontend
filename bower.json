@@ -1,0 +1,21 @@
+{
+  "name": "habitat_frontend",
+  "homepage": "https://github.com/nathaniel-miller/habitat_frontend",
+  "authors": [
+    "Nathaniel Miller <dukeoflaser@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "AngularDevise": "angular-devise#^1.3.0"
+  }
+}
