@@ -3,6 +3,10 @@ var app = express();
 
 app.use(express.static(__dirname));
 
-app.listen(8080);
 
-console.log('Server started at http://localhost:8080');
+
+var port = process.env.PORT || 8080;
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
